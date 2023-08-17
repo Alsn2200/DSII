@@ -32,11 +32,28 @@ if busca == agenda['cpf']:
 # Quetão 04) Crie um programa que cadastre informações de várias pessoas (nome,idade e cpf) e depois coloque em um dicionário. Depois remova todas aspessoas menores de 18 anos do dicionário e coloque em outro dicionário.
 
 cadastro01 = {}
-opc = 0
-
-while opc != 1:
-    cadastro01['nome'] = input('Insira seu nome: ')
-    cadastro01['idadae'] = input('Insira sua idade: ')
+opcao = 0
+while  opcao != 1 :
+    cadastro01['nome'] = input('Insira seu nome')
+    cadastro01['idade'] = input('Insira sua idade: ')
     cadastro01['cpf'] = input('Insira seu cpf: ')
-    opc = input('Tecle 1 para finalizar. \n Tecle Enter para cadastrar outra pessoa')
+    opcao = input('Insira 1 para finalizar: ')
+
+
+# Questao 5 Considere um sistema onde os dados são armazenados em dicionários.Nesse sistema existe um dicionario principal e o dicionário de backup.Cada vez que o dicionário principal atinge tamanho 5, ele imprime osdados na tela e apaga o seu conteúdo. Crie um programa que insira dados em um dicionário, realizando o backup a cada dado e excluindo os dadosdo dicionário principal quando ele atingir tamanho 5.
+
+principal = {}
+backup = {}
+i = 0 
+while True:
+    i += 1
+    principal[f'nome{i}'] = input(f'Insira o {i}° nome: ')
+    tamanho = len(principal)
     
+    if tamanho <= 5 :
+        print("Dicionario Principal: ", principal)
+        principal.clear()
+        print("Principal apagado: ", principal)
+        print("Backup: ",backup)  
+
+# Questao 6) Escreva uma função que conta a quantidade de vogais em um texto e armazena tal quantidade em um dicionário, onde a chave é a vogalconsiderada.
